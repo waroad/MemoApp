@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     SQLiteDatabase sd;
@@ -49,7 +50,7 @@ public class MainActivity extends Activity {
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Toast.makeText(MainActivity.this, ""+i, Toast.LENGTH_SHORT).show();
                 return true;
             }
         });
